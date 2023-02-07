@@ -1,0 +1,23 @@
+// .App {
+//   background-color: red;
+// }
+$blue: #0971f1;
+#contact-card {
+  margin-top: 50px;
+  display: flex;
+  background-color: white;
+  color: $blue;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid $blue;
+  margin-left: 1px;
+}
+.btn-card {
+  background-color: $blue;
+  color: white;
+  width: 75px;
+  height: 30px;
+  border: 2px solid $blue;
+  border-radius: 5px;
+}

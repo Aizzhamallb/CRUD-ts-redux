@@ -1,5 +1,5 @@
 import { API } from "../../helpers/Helpers";
-import { UserActionTypes, UserAction } from "./../../types/types";
+import { UserActionTypes, UserAction } from "../../types/types";
 import { Dispatch } from "redux";
 import axios from "axios";
 import { IUser } from "../../types/IUser";

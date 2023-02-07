@@ -11,9 +11,16 @@ const AddUser: FC = () => {
     name: "",
     lastName: "",
     phone: 0,
+    gender: "",
   });
   const handleSubmit = () => {
-    if (!values.lastName && !values.name && !values.phone) {
+    if (
+      !values.img &&
+      !values.lastName &&
+      !values.name &&
+      !values.phone &&
+      !values.gender
+    ) {
       return;
     }
     addUser(values);
@@ -66,6 +73,35 @@ const AddUser: FC = () => {
             value={values.phone}
             onChange={e => setValues({ ...values, phone: +e.target.value })}
           />
+          <br />
+
+          <label htmlFor="gender" style={{ fontSize: "18px" }}>
+            Choose your gender:
+          </label>
+
+          <select
+            style={{
+              width: "115px",
+              height: "45px",
+              borderRadius: "3px",
+              marginTop: "7px",
+            }}
+            value={values.gender}
+            onChange={e => setValues({ ...values, gender: e.target.value })}
+            name="gender"
+            id="gender">
+            <option
+              value="male"
+              style={{ alignItems: "center", marginLeft: "3px" }}>
+              Male
+            </option>
+            <option
+              value="female"
+              style={{ alignItems: "center", marginLeft: "3px" }}>
+              Female
+            </option>
+          </select>
+
           <Button
             onClick={() => {
               handleSubmit();

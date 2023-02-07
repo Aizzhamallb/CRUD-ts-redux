@@ -1,18 +1,28 @@
 {
   "posts": [
     {
-      "img": "https://i.pinimg.com/236x/8a/de/fe/8adefe5af862b4f9cec286c6ee4722cb.jpg",
-      "name": "Aizhamal",
-      "lastName": "Batyrbekova",
-      "phone": 996500214114,
-      "id": 3
-    },
-    {
       "img": "https://avatars.mds.yandex.net/i?id=bdd0da2de89bc29edda4b5dcaa63d9c023c6b233-8310741-images-thumbs&n=13",
       "name": "Aizhamal",
       "lastName": "Batyrbekova",
       "phone": 996500214114,
-      "id": 4
+      "id": 1,
+      "gender": "female"
+    },
+    {
+      "img": "https://ulibky.ru/wp-content/uploads/2019/10/avatarki_dlya_vatsap_dlya_devushek_42_28061027.jpg",
+      "name": "Zhami",
+      "lastName": "Sozonbaeva",
+      "phone": 996504200100,
+      "gender": "female",
+      "id": 2
+    },
+    {
+      "img": "https://pbs.twimg.com/media/E1RdwoRVIAcNBX_.jpg",
+      "name": "Akti",
+      "lastName": "S.",
+      "phone": 996504200100,
+      "gender": "",
+      "id": 3
     }
   ],
   "comments": [],

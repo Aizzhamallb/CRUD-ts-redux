@@ -19,6 +19,7 @@ const EditUser: FC = () => {
     name: "",
     lastName: "",
     phone: 0,
+    gender: "",
   });
 
   useEffect(() => {
@@ -34,7 +35,7 @@ const EditUser: FC = () => {
       return;
     }
     saveEditedUser(id, values);
-    setValues({ img: "", name: "", lastName: "", phone: 0 });
+    setValues({ img: "", name: "", lastName: "", phone: 0, gender: "" });
     getUsers();
     navigate("/");
   };
@@ -65,6 +66,13 @@ const EditUser: FC = () => {
           <TextField
             style={{ padding: "5px" }}
             variant="outlined"
+            label="Image"
+            value={values.img}
+            onChange={e => setValues({ ...values, img: e.target.value })}
+          />
+          <TextField
+            style={{ padding: "5px" }}
+            variant="outlined"
             label="Name"
             value={values.name}
             onChange={e => setValues({ ...values, name: e.target.value })}
@@ -83,6 +91,34 @@ const EditUser: FC = () => {
             value={values.phone}
             onChange={e => setValues({ ...values, phone: +e.target.value })}
           />
+          <br />
+          <label htmlFor="gender" style={{ fontSize: "18px" }}>
+            Choose your gender:
+          </label>
+
+          <select
+            style={{
+              width: "115px",
+              height: "45px",
+              borderRadius: "3px",
+              marginTop: "7px",
+            }}
+            value={values.gender}
+            onChange={e => setValues({ ...values, gender: e.target.value })}
+            name="gender"
+            id="gender">
+            <option
+              value="male"
+              style={{ alignItems: "center", marginLeft: "3px" }}>
+              Male
+            </option>
+            <option
+              value="female"
+              style={{ alignItems: "center", marginLeft: "3px" }}>
+              Female
+            </option>
+          </select>
+
           <Button onClick={handleSubmit}>Save </Button>
         </Box>
       </div>
