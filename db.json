@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "img": "https://i.pinimg.com/236x/8a/de/fe/8adefe5af862b4f9cec286c6ee4722cb.jpg",
+      "name": "Aizhamal",
+      "lastName": "Batyrbekova",
+      "phone": 996500214114,
+      "id": 3
+    },
+    {
+      "img": "https://avatars.mds.yandex.net/i?id=bdd0da2de89bc29edda4b5dcaa63d9c023c6b233-8310741-images-thumbs&n=13",
+      "name": "Aizhamal",
+      "lastName": "Batyrbekova",
+      "phone": 996500214114,
+      "id": 4
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
