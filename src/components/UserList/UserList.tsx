@@ -6,6 +6,11 @@ import CardUser from "../CardUser/CardUser";
 const UserList = () => {
   const { getUsers } = useAction();
   const { error, loading, user } = useTypedSelector(state => state.userReducer);
+  // const [filtred, setFiltred] = useState("");
+  // const submitHandler = (e: any) => {
+  //   e.preventDefault();
+  //   console.log(filtred);
+  // };
   useEffect(() => {
     getUsers();
   }, []);

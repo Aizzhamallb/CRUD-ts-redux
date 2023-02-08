@@ -18,7 +18,7 @@ export const getUsers = () => {
   return async (dispatch: Dispatch<UserAction>) => {
     try {
       dispatch({ type: UserActionTypes.GET_USERS });
-      const res = await axios(API);
+      const res = await axios(`${API}${window.location.search}`);
       dispatch({ type: UserActionTypes.GET_USERS_SUCCESS, payload: res.data });
     } catch (error: any) {
       dispatch({ type: UserActionTypes.GET_USERS_ERROR, payload: error });

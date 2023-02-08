@@ -12,6 +12,7 @@ export enum UserActionTypes {
   GET_USERS_ERROR = " GET_USERS_ERROR",
   GET_USERS_UPDATE = " GET_USERS_UPDATE",
   PAGE_USERS = "PAGE_USERS",
+  SET_SEARCH_INPUT = "SET_SEARCH_INPUT",
 }
 
 interface FetchUserActionSuccess {
@@ -29,9 +30,14 @@ interface FetchUserActionEdit {
 interface FetchUserAction {
   type: UserActionTypes.GET_USERS;
 }
+interface SetSearchInputAction {
+  type: UserActionTypes.SET_SEARCH_INPUT;
+  payload: string;
+}
 
 export type UserAction =
   | FetchUserActionSuccess
   | FetchUserActionError
   | FetchUserActionEdit
-  | FetchUserAction;
+  | FetchUserAction
+  | SetSearchInputAction;

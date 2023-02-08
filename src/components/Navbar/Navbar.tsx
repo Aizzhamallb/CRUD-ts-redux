@@ -15,7 +15,12 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { styled, alpha } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
 import InputBase from "@mui/material/InputBase";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { useAction } from "../../hooks/useAction";
+import { useState } from "react";
+import { useEffect } from "react";
+import { getUsers } from "../../store/action-creators/user";
+import { useDispatch } from "react-redux";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -82,6 +87,20 @@ function ResponsiveAppBar() {
     setAnchorElUser(null);
   };
   const navigate = useNavigate();
+  const { getUsers } = useAction();
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [search, setSearch] = useState(searchParams.get("q") || "");
+
+  useEffect(() => {
+    setSearchParams({
+      q: search,
+    });
+  }, [search]);
+
+  useEffect(() => {
+    getUsers();
+  }, [searchParams]);
 
   return (
     <AppBar position="static">
@@ -179,6 +198,8 @@ function ResponsiveAppBar() {
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ "aria-label": "search" }}
+              value={search}
+              onChange={e => setSearch(e.target.value)}
             />
           </Search>
         </Toolbar>

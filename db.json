@@ -9,19 +9,11 @@
       "gender": "female"
     },
     {
-      "img": "https://ulibky.ru/wp-content/uploads/2019/10/avatarki_dlya_vatsap_dlya_devushek_42_28061027.jpg",
-      "name": "Zhami",
-      "lastName": "Sozonbaeva",
-      "phone": 996504200100,
-      "gender": "female",
-      "id": 2
-    },
-    {
       "img": "https://pbs.twimg.com/media/E1RdwoRVIAcNBX_.jpg",
       "name": "Akti",
-      "lastName": "S.",
-      "phone": 996504200100,
-      "gender": "",
+      "lastName": "S",
+      "phone": 504200100,
+      "gender": "male",
       "id": 3
     }
   ],
