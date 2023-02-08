@@ -13,7 +13,6 @@ const CardUser: FC<PropsItem> = ({ item }) => {
     await deleteUser(item.id);
     getUsers();
   };
-  console.log(item);
 
   return (
     <>

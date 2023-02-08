@@ -19,8 +19,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { useAction } from "../../hooks/useAction";
 import { useState } from "react";
 import { useEffect } from "react";
-import { getUsers } from "../../store/action-creators/user";
-import { useDispatch } from "react-redux";
+import FilterUsers from "../FilterUsers/FilterUsers";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -190,6 +189,11 @@ function ResponsiveAppBar() {
               sx={{ my: 2, color: "white", display: "block" }}>
               ADD
             </Button>
+            <Button
+              onClick={() => navigate(`/add`)}
+              sx={{ my: 2, color: "white", display: "block" }}>
+              SORT
+            </Button>
           </Box>
           <Search>
             <SearchIconWrapper>
@@ -202,6 +206,7 @@ function ResponsiveAppBar() {
               onChange={e => setSearch(e.target.value)}
             />
           </Search>
+          <FilterUsers />
         </Toolbar>
       </Container>
     </AppBar>
